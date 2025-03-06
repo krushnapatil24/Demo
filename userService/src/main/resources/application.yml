@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: userService  # Application name
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservice?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Krushna@2000  # For environment variable or external config
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  instance:
+    prefer-ip: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
